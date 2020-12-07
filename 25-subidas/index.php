@@ -20,7 +20,19 @@
         </div>
         <button type="submit" class="btn btn-primary">Subir Archivo</button>
     </form>
+   
+    <h1>Listado imagenes</h1>
+
     <?php
+    $gestor = opendir('./imagenes');
+    if ($gestor) {
+        while(($image = readdir($gestor)) !== false){
+            if($image != '.' && $image != '..'){
+                echo "<img src='imagenes/$image width='200px'><br>";
+                var_dump($image);
+            }
+        }
+    }
 
 
     ?>
