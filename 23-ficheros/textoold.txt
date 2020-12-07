@@ -1,0 +1,2 @@
+Hola soy un archivo de texto y queiro ser el mejor.
+Pero si no haces un while solo te mostraré una linea.Soy un texto metido desde PHPSoy un texto metido desde PHPSoy un texto metido desde PHPSoy un texto metido desde PHPSoy un texto metido desde PHPSoy un texto metido desde PHP
