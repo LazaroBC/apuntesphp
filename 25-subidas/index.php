@@ -25,14 +25,13 @@
 
     <?php
     $gestor = opendir('./imagenes');
-    if ($gestor) {
-        while(($image = readdir($gestor)) !== false){
-            if($image != '.' && $image != '..'){
-                echo "<img src='imagenes/$image width='200px'><br>";
-                var_dump($image);
-            }
-        }
-    }
+    if ($gestor) :
+        while(($image = readdir($gestor)) !== false):
+            if($image != '.' && $image != '..'):
+                echo "<span class='card' style='width: 12rem;' ><img src='imagenes/$image' width='500px'></span>";
+            endif;
+        endwhile;
+    endif;
 
 
     ?>
