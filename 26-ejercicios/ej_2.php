@@ -9,7 +9,7 @@
 </head>
 
 <body class=container>
-    <h1>Ejercicio 1</h1>
+    <h1>Ejercicio 2</h1>
 
     <?php
     /*
@@ -19,13 +19,23 @@
      * 4. Mostrar el resultado.
      */
     if (isset($_GET['correo'])){
-    $validar = $_GET(['correo']);
+        
     function correo(){
-        $validar = filter_var($_GET(['correo']));
+        $correo = $_GET['correo'];
+        $validar = filter_var($correo, FILTER_VALIDATE_EMAIL);
         return $validar;
-        var_dump($validar);
+        
     }
+}else {
+    echo("Introduce el correo a validar");
+    die();
 }
+if (correo()){
+    echo ("El correo " . $_GET['correo'] . " es correcto");
+}else {
+    echo ("El correo " . $_GET['correo'] . " no es correcto");
+}
+
 ?>
 
 
