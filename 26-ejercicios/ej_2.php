@@ -11,7 +11,6 @@
 <body class=container>
     <h1>Ejercicio 1</h1>
 
-    
     <?php
     /*
      * 1. Una función.
@@ -26,7 +25,9 @@
         return $validar;
         var_dump($validar);
     }
-    ?>
+}
+?>
+
 
     
 </body>
