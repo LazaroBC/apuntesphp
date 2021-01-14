@@ -5,8 +5,10 @@ $usuario = 'root';
 $password = '';
 $baseDeDatos = 'blog_master';
 $db = mysqli_connect($servidor, $usuario, $password,$baseDeDatos);
-mysqli_query($db, 'SETNAMES "utf8"');
+mysqli_query($db, 'SET NAMES "utf8"');
 
 // Iniciar sesión
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+    }
 ?>

@@ -1,13 +1,27 @@
-<?php require_once 'includes/helpers.php'; ?>
+
 
         <!-- BARRA LATERAL -->
         <aside id="sidebar" >
-        <?php if(isset($_SESSION['usuario'])): ?>
 
+        <div id="buscador" class="bloque">
+            <h3>Buscar por título</h3>
+
+            <form action="buscar.php" method="POST">
+                <input type="text" name="busqueda"/>
+                <input type="submit" value="Buscar" />
+            </form>
+        </div>
+        <?php if(isset($_SESSION['usuario'])): ?>
             <div id="usuario-logueado" class="bloque">
             <h3>Bienvenido, <?=$_SESSION['usuario']['nombre'] . ' ' . $_SESSION['usuario']['apellidos'];?> </h3>
+            <!-- Botones -->
+            <a href="crear-entradas.php" class="boton boton-verde">Crear entradas</a>
+            <a href="crear-categoria.php" class="boton">Crear Categoría</a>
+            <a href="mis-datos.php" class="boton boton-naranja">Mis datos</a>
+            <a href="cerrar-sesion.php" class="boton boton-rojo">Cerrar sesión</a>
         </div>
         <?php endif; ?>
+        <?php if(!isset($_SESSION['usuario'])): ?>
             <div id="login" class="bloque">
                 <h3>Identificate</h3>
                 <?php if(isset($_SESSION['error_login'])): ?>
@@ -15,6 +29,7 @@
                     <h3><?=$_SESSION['error_login'];?> </h3>
                     </div>
                 <?php endif; ?>
+
                 <form action="login.php" method="POST">
                     <label for="email">Email</label>
                     <input type="email" name="email"/>
@@ -60,8 +75,9 @@
                     <input type="submit" name="submit"value="Registrar"/>
                 </form>
                 
-                <?php borrarErrores(); ?>
+                <?php borrarErrores();?>
 
             </div>
+        <?php endif; ?>
             
         </aside>

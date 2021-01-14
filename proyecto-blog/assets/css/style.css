@@ -35,10 +35,13 @@ body {
 }
 
 .alerta-error {
-    
     background: red;
-    
+}
 
+.fecha{
+    color: grey;
+    margin-top: 5px;
+    font-size: 14px;
 }
 /*Cabecera*/
 #cabecera {
@@ -154,17 +157,41 @@ input[type="password"]{
     margin-bottom: 10px;
 }
 
-input[type="bottom"],
-input[type="submit"]{
+input[type="button"],
+input[type="submit"],
+.boton{
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
-    background: #2979CD;
+    background: #4696ec;
     border: 1px solid #156785;
     cursor: pointer;
     padding: 7px;
+}
+.boton{
+    text-align: center;
+    width: 130px;
+    color: white !important;
+    
+}
+.boton-naranja{
+    background: rgb(228, 180, 92);
+    border-color: orange;
+    
+    
+}
+.boton-verde{
+    background: rgb(109, 228, 109) ;
+    border-color: green;
+    
+}
+
+.boton-rojo{
+    background: rgb(230, 90, 90) ;
+    border-color: red;
+    
 }
 /*Principal*/
 #principal {
